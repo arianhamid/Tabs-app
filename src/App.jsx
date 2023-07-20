@@ -25,7 +25,7 @@ function App() {
   if (loading) {
     return (
       <section className="section loading">
-        <h2>Loading...</h2>;
+        <h2>Loading...</h2>
       </section>
     );
   }
@@ -38,7 +38,11 @@ function App() {
       </div>
       <div className="jobs-center">
         {/* btn container */}
-        <div className="btn-container"></div>
+        <div className="btn-container">
+          {jobs.map((item, index) => {
+            return <button>{item.company}</button>;
+          })}
+        </div>
         {/* job info */}
         <article className="job-info">
           <h2>{title}</h2>
